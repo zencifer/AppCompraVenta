@@ -3,6 +3,7 @@ package com.example.appcomprayventa
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.appcomprayventa.Anuncios.CrearAnuncio
 import com.example.appcomprayventa.Fragmentos.FragmentCuenta
 import com.example.appcomprayventa.Fragmentos.FragmentInicio
 import com.example.appcomprayventa.databinding.ActivityMainBinding
@@ -37,6 +38,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.Item_Cuenta -> { verFragmentCuenta(); true }
                 else ->{ false }
             }
+        }
+
+        binding.FAB.setOnClickListener {
+            startActivity(Intent(this, CrearAnuncio::class.java))
         }
     }
 
